@@ -52,3 +52,8 @@ WHEN order_status = "CLOSED" THEN "Order is closed"
 ELSE "Order is cancelled"
 END AS full_order_status
 FROM orders;
+
+/* NULL - это специальное значение, которое используется в SQL 
+для обозначения отсутствия данных. Оно отличается от пустой строки
+или нулевого значения, так как NULL означает отсутствие какого-либо
+значения в ячейке таблицы.*/

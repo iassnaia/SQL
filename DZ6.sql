@@ -17,9 +17,9 @@ CREATE PROCEDURE time_sec(num INT)
 
 BEGIN		CASE
 
-WHEN num < 60 THEN
+ WHEN num < 60 THEN
 
-SELECT CONCAT(num, ' ', 'seconds') AS Result;
+  SELECT CONCAT(num, ' ', 'seconds') AS Result;
 
  WHEN num >= 60 AND num < 3600 THEN
 
@@ -64,15 +64,15 @@ DECLARE result VARCHAR(256);
 
 SET result = ' '; 
 
-	WHILE i < num DO 
+ WHILE i < num DO 
+ 
+  SET i = i + 2; 
 
-		SET i = i + 2; 
+  SET result = concat(result, '  ', i); 
 
-		SET result = concat(result, '  ', i); 
+   END while; 
 
-	END while; 
-
-	RETURN result; 
+   RETURN result; 
 
 END $$ 
 
